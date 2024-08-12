@@ -42,6 +42,6 @@
 		<module>cargo-api</module>
 		<module>cargo-query</module>
 	    <module>cargo-start</module>
-    <module>cargo-shared</module>
-  </modules>
+    	<module>cargo-shared</module>
+    </modules>
 </project>

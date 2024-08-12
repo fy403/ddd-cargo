@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.deepoove.cargo.domain.aggregate.handlingevent.HandlingEvent;
-import com.deepoove.cargo.domain.aggregate.handlingevent.HandlingEventRepository;
+import com.deepoove.cargo.domain.aggregate.handlingevent.event.HandlingEvent;
+import com.deepoove.cargo.domain.aggregate.handlingevent.repository.HandlingEventRepository;
 import com.deepoove.cargo.infrastructure.db.converter.HandlingEventConverter;
 import com.deepoove.cargo.infrastructure.db.dataobject.HandlingEventDO;
 import com.deepoove.cargo.infrastructure.db.mapper.HandlingEventMapper;

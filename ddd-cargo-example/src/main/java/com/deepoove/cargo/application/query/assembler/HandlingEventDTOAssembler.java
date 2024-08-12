@@ -9,7 +9,7 @@ import org.springframework.util.StringUtils;
 
 import com.deepoove.cargo.application.query.dto.CarrierMovementDTO;
 import com.deepoove.cargo.application.query.dto.HandlingEventDTO;
-import com.deepoove.cargo.domain.aggregate.handlingevent.EventTypeEnum;
+import com.deepoove.cargo.domain.aggregate.handlingevent.enums.EventTypeEnum;
 import com.deepoove.cargo.infrastructure.db.dataobject.CarrierMovementDO;
 import com.deepoove.cargo.infrastructure.db.dataobject.HandlingEventDO;
 import com.deepoove.cargo.infrastructure.db.mapper.CarrierMovementMapper;

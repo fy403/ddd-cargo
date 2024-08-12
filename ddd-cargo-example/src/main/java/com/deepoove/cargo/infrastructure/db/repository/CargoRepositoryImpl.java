@@ -3,9 +3,9 @@ package com.deepoove.cargo.infrastructure.db.repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
-import com.deepoove.cargo.domain.aggregate.cargo.CargoRepository;
-import com.deepoove.cargo.domain.aggregate.cargo.valueobject.EnterpriseSegment;
+import com.deepoove.cargo.domain.aggregate.cargo.root.Cargo;
+import com.deepoove.cargo.domain.aggregate.cargo.repository.CargoRepository;
+import com.deepoove.cargo.domain.aggregate.cargo.enums.EnterpriseSegment;
 import com.deepoove.cargo.infrastructure.db.converter.CargoConverter;
 import com.deepoove.cargo.infrastructure.db.dataobject.CargoDO;
 import com.deepoove.cargo.infrastructure.db.mapper.CargoMapper;
