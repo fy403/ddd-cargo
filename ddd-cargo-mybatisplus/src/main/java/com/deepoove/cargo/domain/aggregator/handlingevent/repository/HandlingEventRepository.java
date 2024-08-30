@@ -1,6 +1,6 @@
-package com.deepoove.cargo.domain.aggregate.handlingevent.repository;
+package com.deepoove.cargo.domain.aggregator.handlingevent.repository;
 
-import com.deepoove.cargo.domain.aggregate.handlingevent.event.HandlingEvent;
+import com.deepoove.cargo.domain.aggregator.handlingevent.event.HandlingEvent;
 
 import java.util.List;
 

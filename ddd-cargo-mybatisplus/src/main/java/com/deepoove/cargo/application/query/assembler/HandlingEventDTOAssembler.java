@@ -2,7 +2,7 @@ package com.deepoove.cargo.application.query.assembler;
 
 import com.deepoove.cargo.application.query.dto.CarrierMovementDTO;
 import com.deepoove.cargo.application.query.dto.HandlingEventDTO;
-import com.deepoove.cargo.domain.aggregate.handlingevent.enums.EventTypeEnum;
+import com.deepoove.cargo.domain.aggregator.handlingevent.enums.EventTypeEnum;
 import com.deepoove.cargo.infrastructure.db.dao.CarrierMovementDao;
 import com.deepoove.cargo.infrastructure.db.dataobject.CarrierMovementDO;
 import com.deepoove.cargo.infrastructure.db.dataobject.HandlingEventDO;

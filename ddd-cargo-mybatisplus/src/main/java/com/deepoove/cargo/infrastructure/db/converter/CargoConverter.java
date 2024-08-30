@@ -1,7 +1,7 @@
 package com.deepoove.cargo.infrastructure.db.converter;
 
-import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
-import com.deepoove.cargo.domain.aggregate.cargo.valueobject.DeliverySpecification;
+import com.deepoove.cargo.domain.aggregator.cargo.Cargo;
+import com.deepoove.cargo.domain.aggregator.cargo.valueobject.DeliverySpecification;
 import com.deepoove.cargo.infrastructure.db.dataobject.CargoDO;
 
 public class CargoConverter {
@@ -18,10 +18,16 @@ public class CargoConverter {
     }
 
     public static Cargo deserialize(CargoDO cargo) {
-        Cargo target = Cargo.newCargo(cargo.getId(), cargo.getSenderPhone(), cargo.getDescription(),
-                new DeliverySpecification(cargo.getOriginLocationCode(),
-                        cargo.getDestinationLocationCode()));
-        return target;
+        DeliverySpecification delivery = Cargo.getDeliverySpecificationBuilder()
+                .withOriginLocationCode(cargo.getOriginLocationCode())
+                .withDestinationLocationCode(cargo.getDestinationLocationCode())
+                .build();
+        return Cargo.cargoFactory(
+                cargo.getId(),
+                cargo.getSenderPhone(),
+                cargo.getDescription(),
+                delivery
+        );
     }
 
 }

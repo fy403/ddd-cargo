@@ -1,4 +1,4 @@
-package com.deepoove.cargo.domain.aggregate.cargo.enums;
+package com.deepoove.cargo.domain.aggregator.cargo.enums;
 
 public enum EnterpriseSegment {
 

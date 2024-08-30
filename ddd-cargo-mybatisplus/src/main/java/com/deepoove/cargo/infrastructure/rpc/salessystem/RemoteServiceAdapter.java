@@ -3,8 +3,8 @@ package com.deepoove.cargo.infrastructure.rpc.salessystem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
-import com.deepoove.cargo.domain.aggregate.cargo.enums.EnterpriseSegment;
+import com.deepoove.cargo.domain.aggregator.cargo.Cargo;
+import com.deepoove.cargo.domain.aggregator.cargo.enums.EnterpriseSegment;
 import com.deepoove.cargo.infrastructure.rpc.salessystem.dataobject.UserDO;
 
 @Component

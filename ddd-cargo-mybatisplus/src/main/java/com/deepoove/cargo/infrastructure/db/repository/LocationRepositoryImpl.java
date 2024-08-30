@@ -1,8 +1,8 @@
 package com.deepoove.cargo.infrastructure.db.repository;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.deepoove.cargo.domain.aggregate.location.repository.LocationRepository;
-import com.deepoove.cargo.domain.aggregate.location.Location;
+import com.deepoove.cargo.domain.aggregator.location.repository.LocationRepository;
+import com.deepoove.cargo.domain.aggregator.location.valueobject.Location;
 import com.deepoove.cargo.infrastructure.db.converter.LocationConverter;
 import com.deepoove.cargo.infrastructure.db.dataobject.LocationDO;
 import com.deepoove.cargo.infrastructure.db.mapper.LocationMapper;

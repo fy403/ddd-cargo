@@ -1,4 +1,4 @@
-package com.deepoove.cargo.domain.aggregate.carriermovement;
+package com.deepoove.cargo.domain.aggregator.carriermovement.valueobject;
 
 import java.util.Date;
 

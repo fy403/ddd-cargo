@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 
 import com.deepoove.cargo.application.command.IncidentLoggingCmdService;
 import com.deepoove.cargo.application.command.cmd.HandlingEventAddCommand;
-import com.deepoove.cargo.domain.aggregate.handlingevent.enums.EventTypeEnum;
-import com.deepoove.cargo.domain.aggregate.handlingevent.event.HandlingEvent;
-import com.deepoove.cargo.domain.aggregate.handlingevent.repository.HandlingEventRepository;
+import com.deepoove.cargo.domain.aggregator.handlingevent.enums.EventTypeEnum;
+import com.deepoove.cargo.domain.aggregator.handlingevent.event.HandlingEvent;
+import com.deepoove.cargo.domain.aggregator.handlingevent.repository.HandlingEventRepository;
 
 @Service
 public class IncidentLoggingCmdServiceImpl implements IncidentLoggingCmdService {

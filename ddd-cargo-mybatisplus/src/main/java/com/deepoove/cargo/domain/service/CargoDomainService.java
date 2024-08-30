@@ -1,8 +1,8 @@
 package com.deepoove.cargo.domain.service;
 
-import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
-import com.deepoove.cargo.domain.aggregate.handlingevent.event.HandlingEvent;
-import com.deepoove.cargo.infrastructure.rpc.salessystem.SalersService;
+import com.deepoove.cargo.domain.aggregator.cargo.Cargo;
+import com.deepoove.cargo.domain.aggregator.handlingevent.event.HandlingEvent;
+import com.deepoove.cargo.shared.SalersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

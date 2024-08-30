@@ -1,14 +1,15 @@
 package com.deepoove.cargo.infrastructure.rpc.salessystem;
 
+import com.deepoove.cargo.shared.SalersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
-import com.deepoove.cargo.domain.aggregate.cargo.enums.EnterpriseSegment;
+import com.deepoove.cargo.domain.aggregator.cargo.Cargo;
+import com.deepoove.cargo.domain.aggregator.cargo.enums.EnterpriseSegment;
 import com.deepoove.cargo.infrastructure.rpc.salessystem.dataobject.UserDO;
 
 @Service
-public class SalersService {
+public class SalersServiceImpl implements SalersService {
 
     @Autowired
     private RemoteServiceAdapter adapter;

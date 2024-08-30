@@ -1,4 +1,4 @@
-package com.deepoove.cargo.domain.aggregate.location;
+package com.deepoove.cargo.domain.aggregator.location.valueobject;
 
 public class Location {
 

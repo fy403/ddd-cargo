@@ -1,7 +1,7 @@
 package com.deepoove.cargo.infrastructure.db.converter;
 
-import com.deepoove.cargo.domain.aggregate.handlingevent.enums.EventTypeEnum;
-import com.deepoove.cargo.domain.aggregate.handlingevent.event.HandlingEvent;
+import com.deepoove.cargo.domain.aggregator.handlingevent.enums.EventTypeEnum;
+import com.deepoove.cargo.domain.aggregator.handlingevent.event.HandlingEvent;
 import com.deepoove.cargo.infrastructure.db.dataobject.HandlingEventDO;
 
 public class HandlingEventConverter {

@@ -1,4 +1,4 @@
-package com.deepoove.cargo.domain.aggregate.cargo.valueobject;
+package com.deepoove.cargo.domain.aggregator.cargo.valueobject;
 
 public class DeliverySpecification {
 

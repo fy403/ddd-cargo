@@ -2,7 +2,7 @@ package com.deepoove.cargo.infrastructure.db.converter;
 
 import org.springframework.beans.BeanUtils;
 
-import com.deepoove.cargo.domain.aggregate.carriermovement.CarrierMovement;
+import com.deepoove.cargo.domain.aggregator.carriermovement.valueobject.CarrierMovement;
 import com.deepoove.cargo.infrastructure.db.dataobject.CarrierMovementDO;
 
 public class CarrierMovementConverter {

@@ -1,6 +1,6 @@
-package com.deepoove.cargo.domain.aggregate.handlingevent.event;
+package com.deepoove.cargo.domain.aggregator.handlingevent.event;
 
-import com.deepoove.cargo.domain.aggregate.handlingevent.enums.EventTypeEnum;
+import com.deepoove.cargo.domain.aggregator.handlingevent.enums.EventTypeEnum;
 
 import java.util.Date;
 import java.util.UUID;

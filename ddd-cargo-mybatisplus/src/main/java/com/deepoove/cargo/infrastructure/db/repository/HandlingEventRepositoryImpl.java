@@ -1,7 +1,7 @@
 package com.deepoove.cargo.infrastructure.db.repository;
 
-import com.deepoove.cargo.domain.aggregate.handlingevent.event.HandlingEvent;
-import com.deepoove.cargo.domain.aggregate.handlingevent.repository.HandlingEventRepository;
+import com.deepoove.cargo.domain.aggregator.handlingevent.event.HandlingEvent;
+import com.deepoove.cargo.domain.aggregator.handlingevent.repository.HandlingEventRepository;
 import com.deepoove.cargo.infrastructure.db.converter.HandlingEventConverter;
 import com.deepoove.cargo.infrastructure.db.dao.HandlingEventDao;
 import com.deepoove.cargo.infrastructure.db.dataobject.HandlingEventDO;

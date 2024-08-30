@@ -5,15 +5,15 @@ import com.deepoove.cargo.application.command.cmd.CargoBookCommand;
 import com.deepoove.cargo.application.command.cmd.CargoDeleteCommand;
 import com.deepoove.cargo.application.command.cmd.CargoDeliveryUpdateCommand;
 import com.deepoove.cargo.application.command.cmd.CargoSenderUpdateCommand;
-import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
-import com.deepoove.cargo.domain.aggregate.cargo.enums.EnterpriseSegment;
-import com.deepoove.cargo.domain.aggregate.cargo.event.CargoBookDomainEvent;
-import com.deepoove.cargo.domain.aggregate.cargo.repository.CargoRepository;
-import com.deepoove.cargo.domain.aggregate.cargo.valueobject.DeliverySpecification;
-import com.deepoove.cargo.domain.aggregate.handlingevent.event.HandlingEvent;
-import com.deepoove.cargo.domain.aggregate.handlingevent.repository.HandlingEventRepository;
+import com.deepoove.cargo.domain.aggregator.cargo.Cargo;
+import com.deepoove.cargo.domain.aggregator.cargo.enums.EnterpriseSegment;
+import com.deepoove.cargo.domain.aggregator.cargo.event.CargoBookDomainEvent;
+import com.deepoove.cargo.domain.aggregator.cargo.repository.CargoRepository;
+import com.deepoove.cargo.domain.aggregator.cargo.valueobject.DeliverySpecification;
+import com.deepoove.cargo.domain.aggregator.handlingevent.event.HandlingEvent;
+import com.deepoove.cargo.domain.aggregator.handlingevent.repository.HandlingEventRepository;
 import com.deepoove.cargo.domain.service.CargoDomainService;
-import com.deepoove.cargo.infrastructure.rpc.salessystem.SalersService;
+import com.deepoove.cargo.shared.SalersService;
 import com.deepoove.cargo.shared.DomainEventPublisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,11 +38,12 @@ public class CargoCmdServiceImpl implements CargoCmdService {
     @Override
     public void bookCargo(CargoBookCommand cargoBookCommand) {
         // create Cargo
-        DeliverySpecification delivery = new DeliverySpecification(
-                cargoBookCommand.getOriginLocationCode(),
-                cargoBookCommand.getDestinationLocationCode());
+        DeliverySpecification delivery = Cargo.getDeliverySpecificationBuilder()
+                .withDestinationLocationCode(cargoBookCommand.getDestinationLocationCode())
+                .withOriginLocationCode(cargoBookCommand.getOriginLocationCode())
+                .build();
 
-        Cargo cargo = Cargo.newCargo(CargoDomainService.nextCargoId(), cargoBookCommand.getSenderPhone(),
+        Cargo cargo = Cargo.cargoFactory(CargoDomainService.nextCargoId(), cargoBookCommand.getSenderPhone(),
                 cargoBookCommand.getDescription(), delivery);
 
         // 流程编排

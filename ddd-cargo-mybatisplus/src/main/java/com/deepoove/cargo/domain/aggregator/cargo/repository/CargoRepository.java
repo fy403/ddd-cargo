@@ -1,7 +1,7 @@
-package com.deepoove.cargo.domain.aggregate.cargo.repository;
+package com.deepoove.cargo.domain.aggregator.cargo.repository;
 
-import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
-import com.deepoove.cargo.domain.aggregate.cargo.enums.EnterpriseSegment;
+import com.deepoove.cargo.domain.aggregator.cargo.Cargo;
+import com.deepoove.cargo.domain.aggregator.cargo.enums.EnterpriseSegment;
 
 public interface CargoRepository {
 

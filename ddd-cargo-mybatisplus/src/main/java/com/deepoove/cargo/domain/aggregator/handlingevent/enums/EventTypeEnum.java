@@ -1,4 +1,4 @@
-package com.deepoove.cargo.domain.aggregate.handlingevent.enums;
+package com.deepoove.cargo.domain.aggregator.handlingevent.enums;
 
 public enum EventTypeEnum {
     RECIEVE(0), LOAD(1), UNLOAD(2), END(3);

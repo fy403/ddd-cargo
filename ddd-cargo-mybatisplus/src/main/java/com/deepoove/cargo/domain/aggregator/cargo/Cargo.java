@@ -1,6 +1,6 @@
-package com.deepoove.cargo.domain.aggregate.cargo;
+package com.deepoove.cargo.domain.aggregator.cargo;
 
-import com.deepoove.cargo.domain.aggregate.cargo.valueobject.DeliverySpecification;
+import com.deepoove.cargo.domain.aggregator.cargo.valueobject.DeliverySpecification;
 
 public class Cargo {
 
@@ -23,13 +23,33 @@ public class Cargo {
      * @param delivery
      * @return
      */
-    public static Cargo newCargo(String id, String senderPhone, String description,
-            DeliverySpecification delivery) {
+    public static Cargo cargoFactory(String id, String senderPhone, String description,
+                                     DeliverySpecification delivery) {
         Cargo cargo = new Cargo(id);
         cargo.senderPhone = senderPhone;
         cargo.description = description;
         cargo.delivery = delivery;
         return cargo;
+    }
+
+    public static DeliverySpecificationBuilder getDeliverySpecificationBuilder() {
+        return new DeliverySpecificationBuilder();
+    }
+
+    public static class DeliverySpecificationBuilder{
+        private String originLocationCode;
+        private String destinationLocationCode;
+        public DeliverySpecificationBuilder withOriginLocationCode(String originLocationCode) {
+            this.originLocationCode = originLocationCode;
+            return this;
+        }
+        public DeliverySpecificationBuilder withDestinationLocationCode(String destinationLocationCode) {
+            this.destinationLocationCode = destinationLocationCode;
+            return this;
+        }
+        public DeliverySpecification build() {
+            return new DeliverySpecification(originLocationCode, destinationLocationCode);
+        }
     }
 
     public String id() {
