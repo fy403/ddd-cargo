@@ -1,4 +1,4 @@
-package com.deepoove.cargo.domain.aggregate.cargo.root;
+package com.deepoove.cargo.domain.aggregate.cargo;
 
 import com.deepoove.cargo.domain.aggregate.cargo.valueobject.DeliverySpecification;
 

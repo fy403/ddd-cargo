@@ -1,6 +1,6 @@
 package com.deepoove.cargo.infrastructure.db.converter;
 
-import com.deepoove.cargo.domain.aggregate.cargo.root.Cargo;
+import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
 import com.deepoove.cargo.domain.aggregate.cargo.valueobject.DeliverySpecification;
 import com.deepoove.cargo.infrastructure.db.dataobject.CargoDO;
 

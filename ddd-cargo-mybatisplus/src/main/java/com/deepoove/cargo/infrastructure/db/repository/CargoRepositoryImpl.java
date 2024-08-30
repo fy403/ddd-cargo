@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.deepoove.cargo.domain.aggregate.cargo.root.Cargo;
+import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
 import com.deepoove.cargo.domain.aggregate.cargo.repository.CargoRepository;
 import com.deepoove.cargo.domain.aggregate.cargo.enums.EnterpriseSegment;
 import com.deepoove.cargo.infrastructure.db.converter.CargoConverter;

@@ -1,26 +1,25 @@
 package com.deepoove.cargo.application.command.impl;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
-
 import com.deepoove.cargo.application.command.CargoCmdService;
 import com.deepoove.cargo.application.command.cmd.CargoBookCommand;
 import com.deepoove.cargo.application.command.cmd.CargoDeleteCommand;
 import com.deepoove.cargo.application.command.cmd.CargoDeliveryUpdateCommand;
 import com.deepoove.cargo.application.command.cmd.CargoSenderUpdateCommand;
-import com.deepoove.cargo.domain.aggregate.cargo.root.Cargo;
+import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
+import com.deepoove.cargo.domain.aggregate.cargo.enums.EnterpriseSegment;
 import com.deepoove.cargo.domain.aggregate.cargo.event.CargoBookDomainEvent;
 import com.deepoove.cargo.domain.aggregate.cargo.repository.CargoRepository;
 import com.deepoove.cargo.domain.aggregate.cargo.valueobject.DeliverySpecification;
-import com.deepoove.cargo.domain.aggregate.cargo.enums.EnterpriseSegment;
 import com.deepoove.cargo.domain.aggregate.handlingevent.event.HandlingEvent;
 import com.deepoove.cargo.domain.aggregate.handlingevent.repository.HandlingEventRepository;
 import com.deepoove.cargo.domain.service.CargoDomainService;
 import com.deepoove.cargo.infrastructure.rpc.salessystem.SalersService;
 import com.deepoove.cargo.shared.DomainEventPublisher;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
+
+import java.util.List;
 
 @Service
 public class CargoCmdServiceImpl implements CargoCmdService {

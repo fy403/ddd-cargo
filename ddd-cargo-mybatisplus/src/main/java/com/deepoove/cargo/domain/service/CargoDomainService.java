@@ -1,13 +1,12 @@
 package com.deepoove.cargo.domain.service;
 
-import java.util.Random;
-
+import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
+import com.deepoove.cargo.domain.aggregate.handlingevent.event.HandlingEvent;
+import com.deepoove.cargo.infrastructure.rpc.salessystem.SalersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.deepoove.cargo.domain.aggregate.cargo.root.Cargo;
-import com.deepoove.cargo.domain.aggregate.handlingevent.event.HandlingEvent;
-import com.deepoove.cargo.infrastructure.rpc.salessystem.SalersService;
+import java.util.Random;
 
 @Service
 public class CargoDomainService {

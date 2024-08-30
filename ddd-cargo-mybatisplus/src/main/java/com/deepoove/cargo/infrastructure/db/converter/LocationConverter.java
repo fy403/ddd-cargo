@@ -2,7 +2,7 @@ package com.deepoove.cargo.infrastructure.db.converter;
 
 import org.springframework.beans.BeanUtils;
 
-import com.deepoove.cargo.domain.aggregate.location.root.Location;
+import com.deepoove.cargo.domain.aggregate.location.Location;
 import com.deepoove.cargo.infrastructure.db.dataobject.LocationDO;
 
 public class LocationConverter {

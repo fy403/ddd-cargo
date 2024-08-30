@@ -1,6 +1,6 @@
 package com.deepoove.cargo.domain.aggregate.carriermovement.repository;
 
-import com.deepoove.cargo.domain.aggregate.carriermovement.root.CarrierMovement;
+import com.deepoove.cargo.domain.aggregate.carriermovement.CarrierMovement;
 
 public interface CarrierMovementRepository {
 

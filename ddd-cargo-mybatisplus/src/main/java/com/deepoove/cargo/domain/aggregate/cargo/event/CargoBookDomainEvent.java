@@ -1,6 +1,6 @@
 package com.deepoove.cargo.domain.aggregate.cargo.event;
 
-import com.deepoove.cargo.domain.aggregate.cargo.root.Cargo;
+import com.deepoove.cargo.domain.aggregate.cargo.Cargo;
 
 public class CargoBookDomainEvent {
 
